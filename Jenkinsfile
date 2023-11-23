@@ -7,7 +7,7 @@ pipeline{
                 sh '''
                     java --version
                     docker --version
-                    docker compose
+                    sudo docker-compose
                 '''
             }
         }
