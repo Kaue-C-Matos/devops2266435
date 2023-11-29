@@ -5,8 +5,8 @@ pipeline{
         stage('test') {
             steps{
                 sh '''
-                    sudo docker-compose up
-                    -S senha123
+                    sudo docker-compose up -S
+                    
                 '''
             }
         }
