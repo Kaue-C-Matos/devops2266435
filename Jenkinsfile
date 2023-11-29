@@ -5,9 +5,7 @@ pipeline{
         stage('Build TADS') {
             steps{
                 sh '''
-                    java --version
-                    docker --version
-                    docker-compose
+                    cy.visitPage("/login");
                 '''
             }
         }
