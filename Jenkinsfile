@@ -5,6 +5,7 @@ pipeline{
         stage('test') {
             steps{
                 sh'''
+                    npm install
                     npm test
                 '''
             }
