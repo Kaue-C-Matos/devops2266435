@@ -5,7 +5,8 @@ pipeline{
         stage('Build TADS') {
             steps{
                 sh '''
-                    cy.visitPage("/login");
+                    sudo docker-compose up
+                    senha123
                 '''
             }
         }
