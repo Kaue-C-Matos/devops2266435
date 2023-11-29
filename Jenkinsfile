@@ -5,7 +5,7 @@ pipeline{
         stage('test') {
             steps{
                 sh '''
-                    node --version
+                    sudo docker-compose build
                     senha123 -S
                 '''
             }
