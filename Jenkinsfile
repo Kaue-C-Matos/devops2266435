@@ -1,15 +1,12 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:latest' // Use a imagem Node.js como base
-            args '-u root' // Execute como usuário root para permissões
-        }
-    }
-    
+    agent any
+
     stages {
         stage('Executar testes') {
             steps {
-                sh 'signIn'
+                script {
+                    sh 'sudo docker run node:latest npm test'
+                }
             }
         }
     }
