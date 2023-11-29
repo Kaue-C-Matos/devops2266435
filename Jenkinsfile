@@ -1,12 +1,11 @@
 pipeline{
-    agent any
+    agent {dockerfile true}
     
     stages{
         stage('test') {
             steps{
                 sh '''
-                    sudo docker-compose build
-                    senha123 -S
+                    node --version
                 '''
             }
         }
