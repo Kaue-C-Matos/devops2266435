@@ -5,7 +5,7 @@ pipeline {
         stage('Executar testes') {
             steps {
                 script {
-                    docker-compose up
+                    sh'docker-compose up'
                 }
             }
         }
