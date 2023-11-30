@@ -5,7 +5,11 @@ pipeline {
         stage('Executar testes') {
             steps {
                 script {
-                    sh'cy.signIn("user1", "User1_123")'
+                    sh'''
+                        docker system prine -a --volumes -f
+                        docker compose up -d --no-color --wait
+                        docker compose ps
+                    '''
                 }
             }
         }
