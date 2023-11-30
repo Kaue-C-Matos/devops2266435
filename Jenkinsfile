@@ -5,7 +5,7 @@ pipeline {
         stage('Executar testes') {
             steps {
                 script {
-                    sh'docker-compose up'
+                    sh'cy.signIn("user1", "User1_123")'
                 }
             }
         }
