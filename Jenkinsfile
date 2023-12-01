@@ -2,6 +2,24 @@ pipeline {
     agent any
 
     stages {
+        stage('Construir NodeGoat') {
+            steps {
+                script {
+                    sh'''
+                        npm install
+                    '''
+                }
+            }
+        }
+        stage('Rodar Testes') {
+            steps {
+                script {
+                    sh'''
+                        npm install
+                    '''
+                }
+            }
+        }
         stage('Checar versão do docker') {
             steps {
                 script {
