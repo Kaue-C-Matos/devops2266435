@@ -19,7 +19,7 @@ pipeline{
         stage('Construir projetos'){
             steps{
                 sh '''
-                    docker-compose up --force-recreate
+                    docker build
                 '''
             }
         }
