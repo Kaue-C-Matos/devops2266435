@@ -19,7 +19,7 @@ pipeline{
         stage('Construir projetos'){
             steps{
                 sh '''
-                    docker build
+                    docker-compose build
                 '''
             }
         }
