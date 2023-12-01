@@ -2,10 +2,17 @@ pipeline{
     agent any
     tools{nodejs 'node'}
     stages{
-        stage('nmp --version'){
+        stage('Construir aplicação NodeGoat'){
             steps{
                 sh '''
-                    npm --version
+                    npm install
+                '''
+            }
+        }
+        stage('Rodat testes'){
+            steps{
+                sh '''
+                    npm test
                 '''
             }
         }
