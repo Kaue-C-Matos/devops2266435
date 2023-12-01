@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     sh'''
-
+                        apt install nodejs
                         npm --version
                     '''
                 }
