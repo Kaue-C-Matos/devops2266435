@@ -17,6 +17,7 @@ pipeline{
             }
         }
         stage('Construir projetos'){
+            agent{dockerfile true}
             steps{
                 sh '''
                     docker-compose build
