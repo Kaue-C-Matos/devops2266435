@@ -19,16 +19,10 @@ pipeline{
         stage('Construir projetos'){
             steps{
                 sh '''
-                    docker-compose build
+                    docker-compose up --force-recreate
                 '''
             }
         }
-        stage('Rodar projetos no container'){
-            steps{
-                sh '''
-                    docker-compose up
-                '''
-            }
-        }
+        
     }
 }
