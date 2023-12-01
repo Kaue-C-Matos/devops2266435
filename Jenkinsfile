@@ -16,14 +16,14 @@ pipeline{
                 '''
             }
         }
-        stage('Construindo Docker') {
+        stage('Construindo projeto nos containers') {
             steps {
                 sh '''
                     docker build .
                 '''
             }
         }
-        stage('Compose Docker') {
+        stage('Rodando projeto nos containers') {
             steps {
                 sh '''
                     docker compose up
