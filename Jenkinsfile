@@ -16,14 +16,19 @@ pipeline{
                 '''
             }
         }
-        stage('Construir projetos'){
-            agent{dockerfile true}
-            steps{
+        stage('Construindo Docker') {
+            steps {
                 sh '''
-                    docker-compose build
+                    docker build .
                 '''
             }
         }
-        
+        stage('Compose Docker') {
+            steps {
+                sh '''
+                    docker compose up
+                '''
+            }
+        }
     }
 }
