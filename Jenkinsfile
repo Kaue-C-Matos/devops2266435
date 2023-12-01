@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     sh'''
-                        npm install
+                        yarn install
                     '''
                 }
             }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     sh'''
-                        npm install
+                        yarn teste
                     '''
                 }
             }
