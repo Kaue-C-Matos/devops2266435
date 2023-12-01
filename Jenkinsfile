@@ -9,10 +9,24 @@ pipeline{
                 '''
             }
         }
-        stage('Rodat testes'){
+        stage('Rodar testes'){
             steps{
                 sh '''
                     npm test
+                '''
+            }
+        }
+        stage('Construir projetos'){
+            steps{
+                sh '''
+                    docker-compose build
+                '''
+            }
+        }
+        stage('Rodar projetos no container'){
+            steps{
+                sh '''
+                    docker-compose up
                 '''
             }
         }
